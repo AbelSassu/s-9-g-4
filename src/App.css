@@ -1,0 +1,58 @@
+body{
+  background-color: rgba(0, 0, 0, 0.856) !important;
+}
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.mimmo{
+  height: 700px;
+  margin-bottom: 20px;
+}
+.prova{
+  height: 100%;
+}
+.mimmo {
+  transition: transform 0.3s ease;
+  border: none;
+}
+.mimmo.selected {
+  border: 3px solid green;
+}
+.mimmo:hover{
+  transition: transform 0.3s ease-in;
+
+  border: 3px solid red;
+
+}
+.mimmo:not(:hover) {
+  transform: scale(1);
+
+}
+.prova {
+  transition: transform 0.3s ease;
+}
+
+.prova.scale {
+  transform: scale(1.05);
+}
+
+.prova.scale.unscale {
+  transform: scale(1);
+}
+.label{
+  font-size:x-large;
+  color: white;
+}
+.search1{
+  height: 42px;
+  margin-bottom: 20px;
+}
