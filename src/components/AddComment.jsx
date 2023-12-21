@@ -13,7 +13,6 @@ class AddComment extends React.Component {
     sendComment = async (e) => {
         e.preventDefault();
         try {
-            console.log("Sending comment:", this.state.comment);
             let response = await fetch(
                 "https://striveschool-api.herokuapp.com/api/comments",
                 {
@@ -22,6 +21,7 @@ class AddComment extends React.Component {
                     headers: {
                         Authorization:
                             "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTczNGM3YWZlMDMxZTAwMTliYTE5MmEiLCJpYXQiOjE3MDMxNjM1MjcsImV4cCI6MTcwNDM3MzEyN30.eNmlGtH4IJ6k_DV_-mCaaAj8CJssSl7beNk_PaSm6Ig",
+                        "Content-Type": "application/json",
                     },
                 }
             );
